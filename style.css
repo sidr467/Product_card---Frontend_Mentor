@@ -3,45 +3,55 @@
 @tailwind utilities;
 
 :root {
-  --Darkcyan: hsl(158, 36%, 37%);
-  --Cream: hsl(30, 38%, 92%);
-  --Verydarkblue: hsl(212, 21%, 14%);
-  --Darkgrayishblue: hsl(228, 12%, 48%);
-  --White: hsl(0, 0%, 100%);
+  --darkcyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --verydarkblue: hsl(212, 21%, 14%);
+  --darkgrayishblue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  @apply bg-cream;
 }
 
 .product {
-  letter-spacing: 0.5rem;
-  font-family: "Montserrat", sans-serif;
+  @apply tracking-widest font-montserrat;
 }
 
 .fraunces {
-  font-family: "Fraunces", serif;
+  @apply font-fraunces;
 }
 
 .text-container > p {
-  color: var(--Darkgrayishblue);
+  @apply text-darkgrayishblue;
 }
 
 .text-container > h1 {
-  color: var(--Verydarkblue);
+  @apply text-verydarkblue;
 }
 
 .price {
-  color: var(--Darkcyan);
+  @apply text-darkcyan;
 }
 
 .st-price {
-  color: var(--Darkgrayishblue);
+  @apply text-darkgrayishblue;
 }
 
 button {
-  background: var(--Darkcyan);
-  color: var(--White);
+  @apply bg-darkcyan text-white;
 }
 
-@media screen and (width: 1440px) {
-  h1 {
-    color: blue;
+.img-container img {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Custom Media Query for 375px */
+@media screen and (max-width: 375px) {
+  .img-container img {
+    width: 90%; /* Adjust this value as needed */
+    margin: 0 auto; /* Center the image */
+    display: block; /* Ensure it's displayed as a block element */
+    transform: scale(0.95); /* Slightly scale down the image */
   }
 }
