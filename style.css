@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --Darkcyan: hsl(158, 36%, 37%);
   --Cream: hsl(30, 38%, 92%);
@@ -6,5 +10,32 @@
   --White: hsl(0, 0%, 100%);
 }
 
-/* font-family: "Fraunces", serif; */
-/* font-family: "Montserrat", sans-serif; */
+.product {
+    letter-spacing: .50rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.fraunces {
+  font-family: "Fraunces", serif;
+}
+
+.text-container > p {
+  color: var(--Darkgrayishblue);
+}
+
+.text-container > h1 {
+  color: var(--Verydarkblue);
+}
+
+.price {
+  color: var(--Darkcyan);
+}
+
+.st-price {
+  color: var(--Darkgrayishblue);
+}
+
+button {
+  background: var(--Darkcyan);
+  color: var(--White);
+}

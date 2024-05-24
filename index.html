@@ -22,6 +22,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link href="./output.css" rel="stylesheet" />
 
     <title>Frontend Mentor | Product preview card component</title>
 
@@ -37,17 +38,31 @@
     </style>
   </head>
   <body>
-    <main>
-      <img src="./images/image-product-mobile.jpg" alt="Perfume_Image" />
-      <p class="product">Perfume</p>
-      <h1 class="product-name">Gabrielle Essence Eau De Parfum</h1>
-      <p class="product-description">
-        A floral, solar and voluptuous interpretation composed by Olivier Polge,
-        Perfumer-Creator for the House of CHANEL.
-      </p>
-      <p class="price">$149.99</p>
-      <p class="st-ptice">$169.99</p>
-      <button>Add to Cart</button>
+    <main class="flex flex-col gap-6 justify-center p-6">
+      <div class="img-container">
+        <img
+          class="rounded-xl"
+          src="./images/image-product-mobile.jpg"
+          alt="Perfume_Image"
+        />
+      </div>
+      <div class="text-container">
+        <p class="product text-sm tracking-widest uppercase">Perfume</p>
+        <h1 class="product-name fraunces text-3xl font-extrabold mt-1">
+          Gabrielle Essence Eau De Parfum
+        </h1>
+        <p class="product-description mt-3">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+      </div>
+      <div class="price-container flex mt-4 gap-6">
+        <p class="price fraunces text-4xl">$149.99</p>
+        <p class="st-price text-xs pt-1 font-bold line-through">$169.99</p>
+      </div>
+      <div class="button-container flex justify-center">
+        <button class="pl-28 pr-28 pt-3 pb-3 rounded-md">Add to Cart</button>
+      </div>
 
       <div class="attribution">
         Challenge by
